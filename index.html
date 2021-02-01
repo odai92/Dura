@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>DuraWiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+
+<body onload="loadBody()">
+
+    <form style="margin:auto;height: 500px;">
+        <div class="row">
+            <div class="col-7">
+                <h1 class="center">DuraWiki </h1>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                            </div>
+                            <select class="custom-select" id="categoria_select" onchange="categoriaChange()">
+                                <option selected value="none"></option>
+                                <option value="armor">Armors</option>
+                                <option value="backpack">Backpacks</option>
+                                <option value="boots">Boots</option>
+                                <option value="helmet">Helmets</option>
+                                <option value="club">Clubs</option>
+                                <option value="distance">Distance</option>
+                                <option value="shield">Shield</option>
+                                <option value="sword">Sword</option>
+                                <option value="axe">Axe</option>
+                                <option value="spellbook">SpellBooks</option>
+                                <option value="wandRod">Wands & Rods</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Item</label>
+                            </div>
+                            <select class="custom-select" id="item_select" disabled onchange="changeItem()">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="itemImg" class="image"></div>
+                    </div>
+                </div>
+                
+                
+                <h4 class="center">Detalhes/Details</h4>
+                <div id="divBonusDetails">
+                        <ul id="detailsList" class="list-group">
+                        </ul>
+                </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td id="tdItem1">
+                                <div id="item1" class="fig32"></div>
+                            </td>
+                            <td id="tdItem2">
+                                <div id="item2" class="fig32"></div>
+                            </td>
+                            <td id="tdItem3">
+                                <div id="item3" class="fig32"></div>
+                            </td>
+                            <td>
+                                <p class="protectionCharm" style="margin: 0" onclick="protectionClick()">Protection
+                                    Charm</p>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="quant_item1" class="divMoneyOval">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="quant_item2" class="divMoneyOval">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="quant_item3" class="divMoneyOval">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="protectMoney" class="divMoneyRect">
+                                </div>
+                            </td>
+                            <td>
+                                <div id="imbueMoney" class="divMoneyRect">
+                                </div>
+                            </td>
+                            <td>
+                                <div id="totalMoney" class="divMoneyRect">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </form>
+
+
+    <script src="index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
